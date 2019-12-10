@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <p>Click the button to try FizzBuzz.</p>
+
+    <button onclick="myFunction()">FizzBuzz</button>
+
+    <p id="demo"></p>
+
+    <script>
+
+
+        function myFunction() {
+
+            let x = prompt("Please enter a number FROM 1 TO 100.");
+
+            while (x > 100 || x < 1) {
+                x = prompt("Please enter a number FROM 1 TO 100.");
+            }
+
+            
+
+            if (x <= 100 && x >= 1) {
+
+                const y = x % 3;
+                const z = x % 5;
+
+                if (y == 0 && z != 0) {
+                    document.getElementById("demo").innerHTML = "Fizz";
+                } else if (y != 0 && z == 0) {
+                    document.getElementById("demo").innerHTML = "Buzz";
+                } else if (y == 0 && z == 0) {
+                    document.getElementById("demo").innerHTML = "FizzBuzz";
+                } else {
+                    document.getElementById("demo").innerHTML = x;
+                };
+            } else {
+                document.getElementById("demo").innerHTML = "gobbledygook";
+            };
+
+
+        }
+    </script>
+
+</body>
+
+</html>
